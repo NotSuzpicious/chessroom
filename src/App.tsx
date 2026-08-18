@@ -1,7 +1,11 @@
+import Navbar from './components/Navbar'
+
 function App() {
   return (
-    <main className="min-h-screen bg-[var(--color-background)] px-8 py-16">
-      <div className="mx-auto max-w-4xl">
+    <div className="min-h-screen bg-[var(--color-background)]">
+      <Navbar />
+
+      <main className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
         <p className="mb-4 text-sm uppercase tracking-[0.2em] text-[var(--color-accent)]">
           Chessroom
         </p>
@@ -15,11 +19,14 @@ function App() {
           study sessions into a focused workspace.
         </p>
 
-        <button className="mt-8 rounded-lg bg-[var(--color-accent)] px-6 py-3 font-medium text-[var(--color-background)] transition-opacity hover:opacity-85">
+        <a
+          href="/study"
+          className="mt-8 inline-block rounded-lg bg-[var(--color-accent)] px-6 py-3 font-medium text-[var(--color-background)] transition-opacity hover:opacity-85"
+        >
           Start Studying
-        </button>
-      </div>
-    </main>
+        </a>
+      </main>
+    </div>
   )
 }
 

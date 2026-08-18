@@ -1,7 +1,8 @@
 function StudyRoom() {
   return (
-    <div className="min-h-screen bg-[var(--color-background)]">
-      <header className="flex h-16 items-center justify-between border-b border-[var(--color-border)] px-6">
+    <div className="flex h-screen flex-col overflow-hidden bg-[var(--color-background)]">
+      {/* Study Room header */}
+      <header className="flex h-16 shrink-0 items-center justify-between border-b border-[var(--color-border)] px-6">
         <a
           href="/"
           className="font-[var(--font-display)] text-lg tracking-wide text-[var(--color-text-primary)]"
@@ -9,28 +10,65 @@ function StudyRoom() {
           CHESSROOM
         </a>
 
-        <a
-          href="/"
-          className="text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
-        >
-          Back to Home
-        </a>
+        <div className="flex items-center gap-4">
+          <span className="text-sm text-[var(--color-text-secondary)]">
+            Study Room
+          </span>
+
+          <a
+            href="/"
+            className="text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
+          >
+            Exit
+          </a>
+        </div>
       </header>
 
-      <main className="flex min-h-[calc(100vh-4rem)] items-center justify-center p-6">
-        <div className="text-center">
-          <p className="text-sm uppercase tracking-[0.2em] text-[var(--color-accent)]">
-            Study Room
-          </p>
+      {/* Workspace */}
+      <main className="grid min-h-0 flex-1 md:grid-cols-2">
+        {/* Chessboard panel */}
+        <section className="flex min-h-0 items-center justify-center border-b border-[var(--color-border)] bg-[var(--color-background)] p-6 md:border-b-0 md:border-r">
+          <div className="w-full max-w-[850px]">
+            <div className="mb-4 flex items-center justify-between">
+              <span className="text-sm font-medium text-[var(--color-text-primary)]">
+                Board
+              </span>
 
-          <h1 className="mt-4 font-[var(--font-display)] text-4xl text-[var(--color-text-primary)]">
-            Your study workspace
-          </h1>
+              <span className="text-xs text-[var(--color-text-secondary)]">
+                Chessboard
+              </span>
+            </div>
 
-          <p className="mt-4 text-[var(--color-text-secondary)]">
-            The chessboard and PDF viewer will live here.
-          </p>
-        </div>
+            {/* Board placeholder */}
+            <div className="aspect-square w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]" />
+          </div>
+        </section>
+
+        {/* PDF panel */}
+        <section className="flex min-h-0 flex-col bg-[var(--color-pdf-background)]">
+          <div className="flex h-12 shrink-0 items-center justify-between border-b border-black/10 px-5">
+            <span className="text-sm font-medium text-[#292722]">
+              PDF Reader
+            </span>
+
+            <span className="text-xs text-[#777269]">
+              No document loaded
+            </span>
+          </div>
+
+          {/* PDF placeholder */}
+          <div className="flex min-h-0 flex-1 items-center justify-center p-8">
+            <div className="text-center">
+              <p className="text-sm font-medium text-[#292722]">
+                No PDF loaded
+              </p>
+
+              <p className="mt-2 text-sm text-[#777269]">
+                Your chess book will appear here.
+              </p>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   )

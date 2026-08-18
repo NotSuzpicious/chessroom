@@ -32,6 +32,10 @@ function ChessBoard() {
     }
   }
 
+  function resetPosition() {
+  setGame(new Chess())
+}
+
   return (
     <div className="w-full">
       <Chessboard
@@ -42,19 +46,27 @@ function ChessBoard() {
         }}
       />
 
-      <div className="mt-4 flex justify-center">
-        <button
-          type="button"
-          onClick={() =>
-            setOrientation((current) =>
-              current === 'white' ? 'black' : 'white',
-            )
-          }
-          className="rounded-md border border-[var(--color-border)] px-4 py-2 text-sm text-[var(--color-text-secondary)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)]"
-        >
-          Flip Board
-        </button>
-      </div>
+      <div className="mt-4 flex justify-center gap-3">
+  <button
+    type="button"
+    onClick={resetPosition}
+    className="rounded-md border border-[var(--color-border)] px-4 py-2 text-sm text-[var(--color-text-secondary)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)]"
+  >
+    Reset Position
+  </button>
+
+  <button
+    type="button"
+    onClick={() =>
+      setOrientation((current) =>
+        current === 'white' ? 'black' : 'white',
+      )
+    }
+    className="rounded-md border border-[var(--color-border)] px-4 py-2 text-sm text-[var(--color-text-secondary)] transition-colors hover:bg-[var(--color-surface)] hover:text-[var(--color-text-primary)]"
+  >
+    Flip Board
+  </button>
+</div>
     </div>
   )
 }

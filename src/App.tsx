@@ -2,6 +2,7 @@ import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
 import Navbar from './components/Navbar'
 import StudyPreview from './components/StudyPreview'
+import CTA from './components/CTA'
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Hero />
         <StudyPreview />
         <HowItWorks />
+        <CTA />
       </main>
     </div>
   )

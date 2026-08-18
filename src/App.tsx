@@ -1,4 +1,5 @@
 import Hero from './components/Hero'
+import HowItWorks from './components/HowItWorks'
 import Navbar from './components/Navbar'
 import StudyPreview from './components/StudyPreview'
 
@@ -10,6 +11,7 @@ function App() {
       <main>
         <Hero />
         <StudyPreview />
+        <HowItWorks />
       </main>
     </div>
   )

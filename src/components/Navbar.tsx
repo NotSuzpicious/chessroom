@@ -13,7 +13,7 @@ function Navbar() {
         {/* Navigation */}
         <div className="hidden items-center gap-8 md:flex">
           <a
-            href="#study"
+            href="/study"
             className="text-sm text-[var(--color-text-secondary)] transition-colors hover:text-[var(--color-text-primary)]"
           >
             Study

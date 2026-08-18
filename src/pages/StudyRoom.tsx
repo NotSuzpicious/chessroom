@@ -1,3 +1,4 @@
+import ChessBoard from '../components/ChessBoard'
 function StudyRoom() {
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-[var(--color-background)]">
@@ -28,7 +29,7 @@ function StudyRoom() {
       <main className="grid min-h-0 flex-1 md:grid-cols-2">
         {/* Chessboard panel */}
         <section className="flex min-h-0 items-center justify-center border-b border-[var(--color-border)] bg-[var(--color-background)] p-6 md:border-b-0 md:border-r">
-          <div className="w-full max-w-[850px]">
+          <div className="w-full max-w-[825px]">
             <div className="mb-4 flex items-center justify-between">
               <span className="text-sm font-medium text-[var(--color-text-primary)]">
                 Board
@@ -40,7 +41,8 @@ function StudyRoom() {
             </div>
 
             {/* Board placeholder */}
-            <div className="aspect-square w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]" />
+            {/*<div className="aspect-square w-full rounded-lg border border-[var(--color-border)] bg-[var(--color-surface)]" />*/}
+            <ChessBoard />
           </div>
         </section>
 

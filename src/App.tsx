@@ -3,6 +3,7 @@ import HowItWorks from './components/HowItWorks'
 import Navbar from './components/Navbar'
 import StudyPreview from './components/StudyPreview'
 import CTA from './components/CTA'
+import Footer from './components/Footer'
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <HowItWorks />
         <CTA />
       </main>
+
+      <Footer />
     </div>
   )
 }
